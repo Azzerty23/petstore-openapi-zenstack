@@ -103,7 +103,7 @@ const swaggerOptions = {
 };
 
 // merge two specs and serve the UI
-expressJSDocSwagger(app)(swaggerOptions, crudApiSpec);
+expressJSDocSwagger(app)(swaggerOptions, { ...crudApiSpec, openapi: "3.0.0" });
 
 app.listen(3000, () =>
   console.log("🚀 Server ready at: http://localhost:3000")

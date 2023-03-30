@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.1.0",
   "info": {
     "title": "Pet Store API",
     "version": "0.1.0",
@@ -23,19 +23,39 @@
     "schemas": {
       "OrderScalarFieldEnum": {
         "type": "string",
-        "enum": ["id", "createdAt", "updatedAt", "userId"]
+        "enum": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "userId"
+        ]
       },
       "PetScalarFieldEnum": {
         "type": "string",
-        "enum": ["id", "createdAt", "updatedAt", "name", "category", "orderId"]
+        "enum": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "name",
+          "category",
+          "orderId"
+        ]
       },
       "SortOrder": {
         "type": "string",
-        "enum": ["asc", "desc"]
+        "enum": [
+          "asc",
+          "desc"
+        ]
       },
       "UserScalarFieldEnum": {
         "type": "string",
-        "enum": ["id", "email", "name", "password"]
+        "enum": [
+          "id",
+          "email",
+          "name",
+          "password"
+        ]
       },
       "User": {
         "type": "object",
@@ -59,7 +79,11 @@
             }
           }
         },
-        "required": ["id", "email", "password"]
+        "required": [
+          "id",
+          "email",
+          "password"
+        ]
       },
       "Pet": {
         "type": "object",
@@ -88,7 +112,13 @@
             "type": "string"
           }
         },
-        "required": ["id", "createdAt", "updatedAt", "name", "category"]
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "name",
+          "category"
+        ]
       },
       "Order": {
         "type": "object",
@@ -117,7 +147,13 @@
             "type": "string"
           }
         },
-        "required": ["id", "createdAt", "updatedAt", "user", "userId"]
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "user",
+          "userId"
+        ]
       },
       "UserWhereInput": {
         "type": "object",
@@ -770,7 +806,10 @@
             "$ref": "#/components/schemas/OrderCreateNestedManyWithoutUserInput"
           }
         },
-        "required": ["email", "password"]
+        "required": [
+          "email",
+          "password"
+        ]
       },
       "UserUpdateInput": {
         "type": "object",
@@ -889,7 +928,10 @@
             "$ref": "#/components/schemas/OrderCreateNestedOneWithoutPetsInput"
           }
         },
-        "required": ["name", "category"]
+        "required": [
+          "name",
+          "category"
+        ]
       },
       "PetUpdateInput": {
         "type": "object",
@@ -1029,7 +1071,9 @@
             "$ref": "#/components/schemas/UserCreateNestedOneWithoutOrdersInput"
           }
         },
-        "required": ["user"]
+        "required": [
+          "user"
+        ]
       },
       "OrderUpdateInput": {
         "type": "object",
@@ -2710,7 +2754,10 @@
             ]
           }
         },
-        "required": ["where", "create"]
+        "required": [
+          "where",
+          "create"
+        ]
       },
       "OrderUpsertWithWhereUniqueWithoutUserInput": {
         "type": "object",
@@ -2739,7 +2786,11 @@
             ]
           }
         },
-        "required": ["where", "update", "create"]
+        "required": [
+          "where",
+          "update",
+          "create"
+        ]
       },
       "OrderUpdateWithWhereUniqueWithoutUserInput": {
         "type": "object",
@@ -2758,7 +2809,10 @@
             ]
           }
         },
-        "required": ["where", "data"]
+        "required": [
+          "where",
+          "data"
+        ]
       },
       "OrderUpdateManyWithWhereWithoutUserInput": {
         "type": "object",
@@ -2777,7 +2831,10 @@
             ]
           }
         },
-        "required": ["where", "data"]
+        "required": [
+          "where",
+          "data"
+        ]
       },
       "OrderScalarWhereInput": {
         "type": "object",
@@ -2876,7 +2933,9 @@
             "$ref": "#/components/schemas/UserCreateNestedOneWithoutOrdersInput"
           }
         },
-        "required": ["user"]
+        "required": [
+          "user"
+        ]
       },
       "OrderUncheckedCreateWithoutPetsInput": {
         "type": "object",
@@ -2896,7 +2955,9 @@
             "type": "string"
           }
         },
-        "required": ["userId"]
+        "required": [
+          "userId"
+        ]
       },
       "OrderCreateOrConnectWithoutPetsInput": {
         "type": "object",
@@ -2915,7 +2976,10 @@
             ]
           }
         },
-        "required": ["where", "create"]
+        "required": [
+          "where",
+          "create"
+        ]
       },
       "OrderUpsertWithoutPetsInput": {
         "type": "object",
@@ -2941,7 +3005,10 @@
             ]
           }
         },
-        "required": ["update", "create"]
+        "required": [
+          "update",
+          "create"
+        ]
       },
       "OrderUpdateWithoutPetsInput": {
         "type": "object",
@@ -3051,7 +3118,10 @@
             "type": "string"
           }
         },
-        "required": ["name", "category"]
+        "required": [
+          "name",
+          "category"
+        ]
       },
       "PetUncheckedCreateWithoutOrderInput": {
         "type": "object",
@@ -3074,7 +3144,10 @@
             "type": "string"
           }
         },
-        "required": ["name", "category"]
+        "required": [
+          "name",
+          "category"
+        ]
       },
       "PetCreateOrConnectWithoutOrderInput": {
         "type": "object",
@@ -3093,7 +3166,10 @@
             ]
           }
         },
-        "required": ["where", "create"]
+        "required": [
+          "where",
+          "create"
+        ]
       },
       "UserCreateWithoutOrdersInput": {
         "type": "object",
@@ -3111,7 +3187,10 @@
             "type": "string"
           }
         },
-        "required": ["email", "password"]
+        "required": [
+          "email",
+          "password"
+        ]
       },
       "UserUncheckedCreateWithoutOrdersInput": {
         "type": "object",
@@ -3129,7 +3208,10 @@
             "type": "string"
           }
         },
-        "required": ["email", "password"]
+        "required": [
+          "email",
+          "password"
+        ]
       },
       "UserCreateOrConnectWithoutOrdersInput": {
         "type": "object",
@@ -3148,7 +3230,10 @@
             ]
           }
         },
-        "required": ["where", "create"]
+        "required": [
+          "where",
+          "create"
+        ]
       },
       "PetUpsertWithWhereUniqueWithoutOrderInput": {
         "type": "object",
@@ -3177,7 +3262,11 @@
             ]
           }
         },
-        "required": ["where", "update", "create"]
+        "required": [
+          "where",
+          "update",
+          "create"
+        ]
       },
       "PetUpdateWithWhereUniqueWithoutOrderInput": {
         "type": "object",
@@ -3196,7 +3285,10 @@
             ]
           }
         },
-        "required": ["where", "data"]
+        "required": [
+          "where",
+          "data"
+        ]
       },
       "PetUpdateManyWithWhereWithoutOrderInput": {
         "type": "object",
@@ -3215,7 +3307,10 @@
             ]
           }
         },
-        "required": ["where", "data"]
+        "required": [
+          "where",
+          "data"
+        ]
       },
       "PetScalarWhereInput": {
         "type": "object",
@@ -3340,7 +3435,10 @@
             ]
           }
         },
-        "required": ["update", "create"]
+        "required": [
+          "update",
+          "create"
+        ]
       },
       "UserUpdateWithoutOrdersInput": {
         "type": "object",
@@ -4185,7 +4283,11 @@
             "$ref": "#/components/schemas/UserMaxAggregateOutputType"
           }
         },
-        "required": ["id", "email", "password"]
+        "required": [
+          "id",
+          "email",
+          "password"
+        ]
       },
       "AggregatePet": {
         "type": "object",
@@ -4234,7 +4336,13 @@
             "$ref": "#/components/schemas/PetMaxAggregateOutputType"
           }
         },
-        "required": ["id", "createdAt", "updatedAt", "name", "category"]
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "name",
+          "category"
+        ]
       },
       "AggregateOrder": {
         "type": "object",
@@ -4277,7 +4385,12 @@
             "$ref": "#/components/schemas/OrderMaxAggregateOutputType"
           }
         },
-        "required": ["id", "createdAt", "updatedAt", "userId"]
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "userId"
+        ]
       },
       "UserCountAggregateOutputType": {
         "type": "object",
@@ -4298,7 +4411,13 @@
             "type": "integer"
           }
         },
-        "required": ["id", "email", "name", "password", "_all"]
+        "required": [
+          "id",
+          "email",
+          "name",
+          "password",
+          "_all"
+        ]
       },
       "UserMinAggregateOutputType": {
         "type": "object",
@@ -4438,7 +4557,13 @@
             "type": "integer"
           }
         },
-        "required": ["id", "createdAt", "updatedAt", "userId", "_all"]
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "userId",
+          "_all"
+        ]
       },
       "OrderMinAggregateOutputType": {
         "type": "object",
@@ -5129,7 +5254,9 @@
       "post": {
         "operationId": "createUser",
         "description": "Create a new User",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "201": {
             "description": "Successful operation",
@@ -5163,7 +5290,9 @@
       "get": {
         "operationId": "findUniqueUser",
         "description": "Find one unique User",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5202,7 +5331,9 @@
       "get": {
         "operationId": "findFirstUser",
         "description": "Find the first User matching the given condition",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5241,7 +5372,9 @@
       "get": {
         "operationId": "findManyUser",
         "description": "Find a list of User",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5283,7 +5416,9 @@
       "patch": {
         "operationId": "updateUser",
         "description": "Update a User",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5317,7 +5452,9 @@
       "patch": {
         "operationId": "updateManyUser",
         "description": "Update Users matching the given condition",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5351,7 +5488,9 @@
       "post": {
         "operationId": "upsertUser",
         "description": "Upsert a User",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5385,7 +5524,9 @@
       "delete": {
         "operationId": "deleteUser",
         "description": "Delete one unique User",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5424,7 +5565,9 @@
       "delete": {
         "operationId": "deleteManyUser",
         "description": "Delete Users matching the given condition",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5463,7 +5606,9 @@
       "get": {
         "operationId": "countUser",
         "description": "Find a list of User",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5509,7 +5654,9 @@
       "get": {
         "operationId": "aggregateUser",
         "description": "Aggregate Users",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5548,7 +5695,9 @@
       "get": {
         "operationId": "groupByUser",
         "description": "Group Users by fields",
-        "tags": ["user"],
+        "tags": [
+          "user"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5590,7 +5739,9 @@
       "post": {
         "operationId": "createPet",
         "description": "Create a new Pet",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "201": {
             "description": "Successful operation",
@@ -5624,7 +5775,9 @@
       "get": {
         "operationId": "findUniquePet",
         "description": "Find one unique Pet",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5663,7 +5816,9 @@
       "get": {
         "operationId": "findFirstPet",
         "description": "Find the first Pet matching the given condition",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5702,7 +5857,9 @@
       "get": {
         "operationId": "findManyPet",
         "description": "Find a list of Pet",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5744,7 +5901,9 @@
       "patch": {
         "operationId": "updatePet",
         "description": "Update a Pet",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5778,7 +5937,9 @@
       "patch": {
         "operationId": "updateManyPet",
         "description": "Update Pets matching the given condition",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5812,7 +5973,9 @@
       "post": {
         "operationId": "upsertPet",
         "description": "Upsert a Pet",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5846,7 +6009,9 @@
       "delete": {
         "operationId": "deletePet",
         "description": "Delete one unique Pet",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5885,7 +6050,9 @@
       "delete": {
         "operationId": "deleteManyPet",
         "description": "Delete Pets matching the given condition",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5924,7 +6091,9 @@
       "get": {
         "operationId": "countPet",
         "description": "Find a list of Pet",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -5970,7 +6139,9 @@
       "get": {
         "operationId": "aggregatePet",
         "description": "Aggregate Pets",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6009,7 +6180,9 @@
       "get": {
         "operationId": "groupByPet",
         "description": "Group Pets by fields",
-        "tags": ["pet"],
+        "tags": [
+          "pet"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6051,7 +6224,9 @@
       "post": {
         "operationId": "createOrder",
         "description": "Create a new Order",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "201": {
             "description": "Successful operation",
@@ -6085,7 +6260,9 @@
       "get": {
         "operationId": "findUniqueOrder",
         "description": "Find one unique Order",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6124,7 +6301,9 @@
       "get": {
         "operationId": "findFirstOrder",
         "description": "Find the first Order matching the given condition",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6163,7 +6342,9 @@
       "get": {
         "operationId": "findManyOrder",
         "description": "Find a list of Order",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6205,7 +6386,9 @@
       "patch": {
         "operationId": "updateOrder",
         "description": "Update a Order",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6239,7 +6422,9 @@
       "patch": {
         "operationId": "updateManyOrder",
         "description": "Update Orders matching the given condition",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6273,7 +6458,9 @@
       "post": {
         "operationId": "upsertOrder",
         "description": "Upsert a Order",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6307,7 +6494,9 @@
       "delete": {
         "operationId": "deleteOrder",
         "description": "Delete one unique Order",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6346,7 +6535,9 @@
       "delete": {
         "operationId": "deleteManyOrder",
         "description": "Delete Orders matching the given condition",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6385,7 +6576,9 @@
       "get": {
         "operationId": "countOrder",
         "description": "Find a list of Order",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6431,7 +6624,9 @@
       "get": {
         "operationId": "aggregateOrder",
         "description": "Aggregate Orders",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -6470,7 +6665,9 @@
       "get": {
         "operationId": "groupByOrder",
         "description": "Group Orders by fields",
-        "tags": ["order"],
+        "tags": [
+          "order"
+        ],
         "responses": {
           "200": {
             "description": "Successful operation",
