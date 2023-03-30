@@ -19,14 +19,13 @@ plugin openapi {
 model User {
     id String @id @default(cuid())
     email String @unique
+    name String?
     password String @password @omit
     orders Order[]
 
-    // everybody can signup
-    @@allow('create', true)
+    // all operations are allowed
+    @@allow('all', true)
 
-    // user profile is publicly readable
-    @@allow('read', true)
 }
 
 model Pet {

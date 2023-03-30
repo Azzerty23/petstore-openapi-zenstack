@@ -12,18 +12,16 @@ generator client {
     provider = "prisma-client-js"
 }
 
-/// @@allow('create', true)
-/// @@allow('read', true)
+/// @@allow('all', true)
 model User {
     id String @id() @default(cuid())
     email String @unique()
+    name String?
     /// @password
     /// @omit
     password String
     orders Order[]
     zenstack_guard Boolean @default(true)
-    zenstack_transaction String?
-    @@index([zenstack_transaction])
 }
 
 /// @@allow('read', orderId == null || order.user == auth())
