@@ -23,8 +23,16 @@ model User {
     password String @password @omit
     orders Order[]
 
-    // all operations are allowed
-    @@allow('all', true)
+    // create operation are allowed without restrictions
+    @@allow('create', true)
+
+    @@openapi.meta({
+        description: 'A user of the pet store',
+        create: {
+            description: 'I would like to disable Swagger UI authentication for this operation',
+            security: []
+        },
+    })
 
 }
 

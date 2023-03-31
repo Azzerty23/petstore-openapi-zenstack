@@ -12,7 +12,8 @@ generator client {
     provider = "prisma-client-js"
 }
 
-/// @@allow('all', true)
+/// @@allow('create', true)
+/// @@openapi.meta({ description: 'A user of the pet store', create: { description: 'I would like to disable Swagger UI authentication for this operation', security: [] } })
 model User {
     id String @id() @default(cuid())
     email String @unique()
@@ -22,6 +23,8 @@ model User {
     password String
     orders Order[]
     zenstack_guard Boolean @default(true)
+    zenstack_transaction String?
+    @@index([zenstack_transaction])
 }
 
 /// @@allow('read', orderId == null || order.user == auth())
