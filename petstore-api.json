@@ -20,6 +20,11 @@
     }
   ],
   "components": {
+    "securitySchemes": {
+      "bearerAuth": { "type": "http", "scheme": "bearer" },
+      "basicAuth": { "type": "http", "scheme": "basic" },
+      "apiKey": { "type": "apiKey", "in": "header", "name": "X-API-KEY" }
+    },
     "schemas": {
       "OrderScalarFieldEnum": {
         "type": "string",
@@ -5249,15 +5254,17 @@
       }
     }
   },
+  "security": [{ "bearerAuth": [], "basicAuth": [], "apiKey": [] }],
   "paths": {
     "/api/user/create": {
       "post": {
         "operationId": "createUser",
-        "description": "I would like to disable Swagger UI authentication for this operation",
-        "security": [], 
+        "description": "Create a new User",
         "tags": [
           "user"
         ],
+        "summary": "I would like to disable Swagger UI authentication for this operation",
+        "security": [], 
         "responses": {
           "201": {
             "description": "Successful operation",
